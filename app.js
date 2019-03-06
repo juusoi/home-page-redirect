@@ -8,8 +8,7 @@ const xkcd_url = 'https://xkcd.com/';
 const what_if_url = 'https://what-if.xkcd.com/';
 
 const server = http.createServer((req, res) => {
-  var day = new Date().getDay();
-  switch (day) {
+  switch (new Date().getDay()) {
     case 0:
       var url = xkcd_url;
       break;
