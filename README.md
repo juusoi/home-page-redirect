@@ -1,7 +1,7 @@
 # home-page-redirect
 NodeJS app for redirecting to URL according to weekday
 ## Requirements
-Node
+[Node.js](https://nodejs.org/en/)
 ## Usage
 - Install node
 - Clone the repo
