@@ -6,9 +6,10 @@ const weekend_url = 'https://en.wikipedia.org/wiki/2020_in_heavy_metal_music';
 const random_wiki_url = 'https://en.wikipedia.org/wiki/Special:Random';
 const xkcd_url = 'https://xkcd.com/';
 const what_if_url = 'https://what-if.xkcd.com/';
+const day = new Date().getDay();
 
 const server = http.createServer((req, res) => {
-  switch (new Date().getDay()) {
+  switch (day) {
     case 1: 
       var url = xkcd_url;
       break;
