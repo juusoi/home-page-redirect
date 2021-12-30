@@ -7,11 +7,12 @@ const port = 3001;
 const weekend_url = 'https://en.wikipedia.org/wiki/2022_in_heavy_metal_music';
 const random_wiki_url = 'https://en.wikipedia.org/wiki/Special:Random';
 const xkcd_url = 'https://xkcd.com/';
-const default_url = 'https://hs.fi'
+const default_url = 'https://hs.fi';
+const ALLOWED_DAYS = [0, 1, 2, 3, 4, 5, 6]
 
 const server = http.createServer((req, res) => {
   const newDay = parseInt(url.parse(req.url, true).query.day);
-  let day = (isNaN(newDay)) ? new Date().getDay() : newDay;
+  let day = (ALLOWED_DAYS.includes(newDay)) ? newDay : new Date().getDay() ;
   switch (day) {
     case 1:
       redirect(res, xkcd_url);
