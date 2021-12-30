@@ -8,3 +8,6 @@ NodeJS app for redirecting to URL according to weekday
 - ```cd home-page-redirect/``` 
 - run ```node app.js```
 - Open browser to ```http://localhost:3001``` 
+## Testing
+- Weekday can be given as query parameter i.e.```http://localhost:3001/?day=1```
+- 0 = sunday, 1 = monday ... 6 = saturday
