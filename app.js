@@ -4,10 +4,9 @@ const url = require('url');
 const hostname = 'localhost';
 const port = 3001;
 
-const weekend_url = 'https://en.wikipedia.org/wiki/2021_in_heavy_metal_music';
+const weekend_url = 'https://en.wikipedia.org/wiki/2022_in_heavy_metal_music';
 const random_wiki_url = 'https://en.wikipedia.org/wiki/Special:Random';
 const xkcd_url = 'https://xkcd.com/';
-const what_if_url = 'https://what-if.xkcd.com/';
 const default_url = 'https://hs.fi'
 
 const server = http.createServer((req, res) => {
@@ -17,16 +16,15 @@ const server = http.createServer((req, res) => {
     case 1:
       redirect(res, xkcd_url);
     case 2:
-      redirect(res, what_if_url);
     case 3:
-      redirect(res, random_wiki_url);
+      redirect(res, default_url);
     case 4:
     case 5:
       redirect(res, weekend_url);
     case 6:
     case 0:
     default:
-      redirect(res, default_url);
+      redirect(res, random_wiki_url);
   }
 });
 
