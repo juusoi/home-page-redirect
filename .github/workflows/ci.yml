@@ -11,4 +11,5 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v2
-      - run: pm2 restart home-page-redirect
+      - name: Run home-page-redirect
+        run: pm2 restart home-page-redirect
