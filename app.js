@@ -15,8 +15,8 @@ const server = http.createServer((req, res) => {
   let day = (ALLOWED_DAYS.includes(newDay)) ? newDay : new Date().getDay() ;
   switch (day) {
     case 1:
-      redirect(res, xkcd_url);
     case 2:
+      redirect(res, xkcd_url);
     case 3:
       redirect(res, default_url);
     case 4:
