@@ -12,7 +12,7 @@ const ALLOWED_DAYS = [0, 1, 2, 3, 4, 5, 6]
 
 const server = http.createServer((req, res) => {
   const newDay = parseInt(url.parse(req.url, true).query.day);
-  let day = (ALLOWED_DAYS.includes(newDay)) ? newDay : new Date().getDay() ;
+  let day = (ALLOWED_DAYS.includes(newDay)) ? newDay : new Date().getDay();
   switch (day) {
     case 1:
     case 2:
