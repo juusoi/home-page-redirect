@@ -4,7 +4,7 @@ const url = require('url');
 const hostname = 'localhost';
 const port = 3001;
 
-const weekend_url = 'https://en.wikipedia.org/wiki/2022_in_heavy_metal_music';
+const weekend_url = 'https://en.wikipedia.org/wiki/2023_in_heavy_metal_music';
 const random_wiki_url = 'https://en.wikipedia.org/wiki/Special:Random';
 const xkcd_url = 'https://xkcd.com/';
 const default_url = 'https://hs.fi';
