@@ -1,5 +1,6 @@
 const http = require("http");
 const url = require("url");
+const { redirect } = require("./redirect");
 
 const hostname = "localhost";
 const port = 3001;
@@ -31,15 +32,6 @@ const server = http.createServer((req, res) => {
       redirect(res, random_wiki_url);
   }
 });
-
-function redirect(res, redirect_url) {
-  res.writeHead(307, {
-    Location: redirect_url,
-    "Cache-Control":
-      "no-store, no-cache, must-revalidate, post-check=0, pre-check=0-cache",
-  });
-  res.end();
-}
 
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);

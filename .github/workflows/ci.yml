@@ -11,5 +11,9 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v3
+      - name: build
+        run: npm ci
+      - name: test
+        run: npm run test:ci
       - name: Run home-page-redirect
         run: pm2 restart home-page-redirect || pm2 start ./ecosystem.config.js
