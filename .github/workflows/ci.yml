@@ -12,4 +12,4 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v3
       - name: Run home-page-redirect
-        run: pm2 restart home-page-redirect
+        run: pm2 restart home-page-redirect || pm2 start ./ecosystem.config.js
