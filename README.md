@@ -32,7 +32,7 @@ Home Page Redirect is a simple Node.js server that redirects users to different 
 
 ## Requirements
 
-- Node.js (v18.16.0)
+- Node.js (>= v16.x)
 
 ---
 
