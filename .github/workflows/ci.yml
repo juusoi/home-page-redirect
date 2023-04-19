@@ -18,4 +18,5 @@ jobs:
         working-directory: ./src
         run: npm run test:ci
       - name: deploy
-        run: pm2 restart home-page-redirect || pm2 start ./src/ecosystem.config.js
+        working-directory: ./src
+        run: pm2 restart home-page-redirect || pm2 start ./ecosystem.config.js
