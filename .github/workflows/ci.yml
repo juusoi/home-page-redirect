@@ -6,30 +6,6 @@ on:
   push:
     branches: [main]
 jobs:
-  run-linters:
-    name: Lint
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      # ESLint and Prettier must be in `package.json`
-      - name: Install Node.js dependencies
-        working-directory: ./src
-        run: npm ci
-
-      - name: Run linters
-        uses: wearerequired/lint-action@v2
-        with:
-          eslint: true
-          prettier: true
-
   build-test-deploy:
     runs-on: self-hosted
 
@@ -40,6 +16,10 @@ jobs:
       - name: build
         working-directory: ./src
         run: npm ci
+
+      - name: test
+        working-directory: ./src
+        run: npm run lint
 
       - name: test
         working-directory: ./src
