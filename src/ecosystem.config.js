@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: "home-page-redirect",
-      script: "./server.js",
+      script: "./index.js",
       instances: "max",
       exec_mode: "cluster",
       autorestart: true,

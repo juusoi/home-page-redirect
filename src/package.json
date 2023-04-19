@@ -2,7 +2,7 @@
   "name": "home-page-redirect",
   "version": "1.0.0",
   "description": "NodeJS server to redirect to different URL based on weekday",
-  "main": "./server.js",
+  "main": "./index.js",
   "scripts": {
     "test": "jest",
     "test:ci": "jest --ci"
@@ -18,7 +18,8 @@
   "license": "MIT",
   "homepage": "https://github.com/juusoi/home-page-redirect#readme",
   "devDependencies": {
-    "jest": "^29.5.0"
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3"
   },
   "dependencies": {
     "http": "^0.0.1-security",
