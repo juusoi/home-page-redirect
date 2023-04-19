@@ -5,6 +5,8 @@ name: CI
 on:
   push:
     branches: [main]
+    paths:
+      - src/**
 jobs:
   build-test-deploy:
     runs-on: self-hosted
