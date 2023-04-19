@@ -17,7 +17,7 @@ jobs:
         working-directory: ./src
         run: npm ci
 
-      - name: test
+      - name: lint
         working-directory: ./src
         run: npm run lint
 

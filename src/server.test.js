@@ -3,6 +3,7 @@ const request = require('supertest');
 const { redirect } = require('./redirect');
 const { server } = require('./server');
 
+const port = process.env.PORT || 3002;
 const weekend_url = 'https://en.wikipedia.org/wiki/2023_in_heavy_metal_music';
 const random_wiki_url = 'https://en.wikipedia.org/wiki/Special:Random';
 const xkcd_url = 'https://xkcd.com/';
@@ -30,7 +31,7 @@ describe('GET /', () => {
 
   beforeAll(() => {
     test_server = http.createServer(server);
-    test_server.listen(3001);
+    test_server.listen(port);
   });
 
   afterAll(() => {
