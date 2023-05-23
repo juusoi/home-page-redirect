@@ -1,7 +1,7 @@
 const http = require('http');
 const request = require('supertest');
-const { redirect } = require('./redirect');
-const { server } = require('./server');
+const { redirect } = require('../redirect.js');
+const { server } = require('../server.js');
 
 const PORT = process.env.PORT || 3002;
 const WEEKEND_URL = 'https://en.wikipedia.org/wiki/2023_in_heavy_metal_music';

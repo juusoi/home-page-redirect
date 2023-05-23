@@ -1,8 +1,8 @@
 const { server } = require('./server');
 
-const hostname = process.env.HOSTNAME || 'localhost';
-const port = process.env.PORT || 3001;
+const HOSTNAME = process.env.HOSTNAME || 'localhost';
+const PORT = process.env.PORT || 3001;
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(PORT, HOSTNAME, () => {
+  console.log(`Server running at http://${HOSTNAME}:${PORT}/`);
 });
