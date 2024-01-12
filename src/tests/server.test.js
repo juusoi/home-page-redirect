@@ -4,7 +4,7 @@ const { redirect } = require('../redirect.js');
 const { server } = require('../server.js');
 
 const PORT = process.env.PORT || 3002;
-const WEEKEND_URL = 'https://en.wikipedia.org/wiki/2023_in_heavy_metal_music';
+const WEEKEND_URL = 'https://en.wikipedia.org/wiki/2024_in_heavy_metal_music';
 const RANDOM_WIKI_URL = 'https://en.wikipedia.org/wiki/Special:Random';
 const XKCD_URL = 'https://xkcd.com/';
 const DEFAULT_URL = 'https://hs.fi';
@@ -78,7 +78,7 @@ describe('GET /', () => {
     expect(response.header.location).toBe(DEFAULT_URL);
   });
 
-  test('should redirect to 2023 heavy metal music Wikipedia page on Thursday and Friday', async () => {
+  test('should redirect to 2024 heavy metal music Wikipedia page on Thursday and Friday', async () => {
     const response1 = await request(server).get('/?day=4');
     expect(response1.statusCode).toBe(307);
     expect(response1.header.location).toBe(WEEKEND_URL);

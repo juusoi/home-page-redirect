@@ -6,10 +6,10 @@ describe('getExpectedUrl', () => {
     expect(getExpectedUrl(2)).toBe('https://xkcd.com/');
     expect(getExpectedUrl(3)).toBe('https://hs.fi');
     expect(getExpectedUrl(4)).toBe(
-      'https://en.wikipedia.org/wiki/2023_in_heavy_metal_music'
+      'https://en.wikipedia.org/wiki/2024_in_heavy_metal_music'
     );
     expect(getExpectedUrl(5)).toBe(
-      'https://en.wikipedia.org/wiki/2023_in_heavy_metal_music'
+      'https://en.wikipedia.org/wiki/2024_in_heavy_metal_music'
     );
     expect(getExpectedUrl(6)).toMatch(
       /https:\/\/en\.wikipedia\.org\/wiki\/[A-Za-z0-9_%]+/

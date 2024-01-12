@@ -1,4 +1,4 @@
-const WEEKEND_URL = 'https://en.wikipedia.org/wiki/2023_in_heavy_metal_music';
+const WEEKEND_URL = 'https://en.wikipedia.org/wiki/2024_in_heavy_metal_music';
 const RANDOM_WIKI_URL = 'https://en.wikipedia.org/wiki/Special:Random';
 const XKCD_URL = 'https://xkcd.com/';
 const DEFAULT_URL = 'https://hs.fi';
