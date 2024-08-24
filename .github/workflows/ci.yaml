@@ -42,27 +42,3 @@ jobs:
       - name: Run tests
         working-directory: ./src
         run: npm run test:ci
-
-  deploy:
-    needs: build
-    runs-on: self-hosted
-
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3
-
-      - name: build
-        working-directory: ./src
-        run: npm ci
-
-      - name: lint
-        working-directory: ./src
-        run: npm run lint
-
-      - name: test
-        working-directory: ./src
-        run: npm run test:ci
-
-      - name: deploy
-        working-directory: ./src
-        run: pm2 restart home-page-redirect || pm2 start ./ecosystem.config.js
